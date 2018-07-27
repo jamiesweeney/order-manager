@@ -6,9 +6,8 @@ import java.util.Map;
 
 public class FIX {
 
-    Map tags;
-    static List<String> required = new ArrayList();
 
+    Map tags;
 
 
 

@@ -9,9 +9,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.Iterator;
-import java.util.Set;
-
+import java.util.*;
 
 /**
  *
@@ -26,6 +24,7 @@ public class BasicOrderManager implements Runnable{
 
     private String address;
     private int port;
+    private boolean running;
 
 
     /**
@@ -44,12 +43,33 @@ public class BasicOrderManager implements Runnable{
 
 
     /**
-     * Starts the Order Manager server and processes orders
-     *
+     * Starts the Order Manager server.
+     */
+    public void start() {
+
+        try {
+            setup();
+            this.running = true;
+            listen();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * Stops the Order manager server.
+     */
+    public void stop(){
+        this.running = false;
+    }
+
+
+    /**
+     * Sets up the order manager server connection channels
      * @throws IOException
      */
-    void start() throws IOException {
-
+    private void setup() throws IOException {
         // Create selector to handle multiple channels
         this.selector = Selector.open();
 
@@ -62,13 +82,6 @@ public class BasicOrderManager implements Runnable{
         serverChannel.register(this.selector, SelectionKey.OP_ACCEPT);
 
         System.out.println("Server started on port >> " + this.port);
-
-        this.listen();
-    }
-
-
-    void stop(){
-
     }
 
 
@@ -78,22 +91,23 @@ public class BasicOrderManager implements Runnable{
      * @throws IOException
      */
     private void listen() throws IOException {
+        Set<SelectionKey> keys;
+        SelectionKey key;
+        Iterator<SelectionKey> iterator;
 
         // Wait for events
-        while (true) {
-            int readyCount = selector.select();
+        while (this.running) {
 
-            if (readyCount == 0) {
+            // Skip if nothing
+            if (selector.select() == 0) {
                 continue;
             }
 
             // Iterate over all the keys
-            Set<SelectionKey> keys = selector.selectedKeys();
-            SelectionKey key;
-            Iterator<SelectionKey> iterator = keys.iterator();
+            keys = selector.selectedKeys();
+            iterator = keys.iterator();
 
             while (iterator.hasNext()){
-
                 key = iterator.next();
                 iterator.remove();
 
@@ -104,9 +118,7 @@ public class BasicOrderManager implements Runnable{
                 if (key.isAcceptable()) {
                     this.acceptClient(key);
                 } else if (key.isReadable()) {
-                    this.read(key);
-                } else if (key.isWritable()) {
-                    this.write(key);
+                    this.readClient(key);
                 }
             }
         }
@@ -130,50 +142,153 @@ public class BasicOrderManager implements Runnable{
     }
 
 
+
+
+    private void readClient(SelectionKey key){
+
+        // Get the message
+        try {
+            String message = this.read(key);
+
+            // Return if the client has disconnected
+            if (message == null){
+                return;
+            }
+
+            if (this.isValidMessage(message)){
+
+
+            }else{
+
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Reads from the client connection key
      *
      * @param key
      * @throws IOException
      */
-    private void read(SelectionKey key) throws IOException {
+    private String read(SelectionKey key) throws IOException {
         SocketChannel channel = (SocketChannel) key.channel();
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         int numRead = -1;
         numRead = channel.read(buffer);
 
+        System.out.println(numRead);
 
-        System.out.println(channel.socket().getRemoteSocketAddress().toString());
-
+        // Check if the socket has been closed
         if (numRead == -1) {
             Socket socket = channel.socket();
             SocketAddress remoteAddr = socket.getRemoteSocketAddress();
             System.out.println("Connection closed by client: " + remoteAddr);
             channel.close();
             key.cancel();
-            return;
+            return null;
         }
 
         byte[] data = new byte[numRead];
         System.arraycopy(buffer.array(), 0, data, 0, numRead);
-        System.out.println("Got: " + new String(data));
+        return new String(data);
     }
+
+    private boolean isValidMessage(String message){
+
+        int checkExpected = -1;
+        int sum = 0;
+
+        // Split into tags
+        String[] splitMsg = message.split("\\|");
+        final LinkedHashMap tags = new LinkedHashMap<Integer, String>();
+        for (String s : splitMsg){
+            String[] elems = s.split("=");
+            tags.put(Integer.parseInt(elems[0]),elems[1]);
+
+            if (Integer.parseInt(elems[0]) != 10){
+                sum += sumASCII(s) + 124;
+            }
+        }
+
+        // Check for all essential tags
+
+
+        List<Map.Entry<Integer,String>> entries = new LinkedList<Map.Entry<Integer,String>>(){{
+            addAll(tags.entrySet());
+        }};
+
+        int lengthExpected = -1;
+        int length = 0;
+
+
+        // Iterate over the tags
+        for (Map.Entry<Integer,String> entry : entries){
+
+            // Skip first 2 tags and stop at the checksum
+            if (entry.getKey().equals(8)){
+                continue;
+            }else if (entry.getKey().equals(9)){
+                lengthExpected = Integer.parseInt(entry.getValue());
+                continue;
+            }else if (entry.getKey().equals(10)){
+                checkExpected = Integer.parseInt(entry.getValue());
+                break;
+            }
+
+            // Add key=value|
+            length += entry.getKey().toString().length();
+            length += 1;
+            length += entry.getValue().length();
+            length += 1;
+        }
+
+        int check = sum%256;
+        boolean lengthEqual = (length == lengthExpected);
+        boolean checkEqual = (check == checkExpected);
+
+
+
+        return (lengthEqual && checkEqual);
+    }
+
+
 
 
     /**
      * @param key
      */
-    private void write(SelectionKey key){
-       return;
+    private void write(SelectionKey key, String message) throws IOException {
+        SocketChannel channel = (SocketChannel) key.channel();
+        ByteBuffer buffer;
+
+        // Write
+        buffer = ByteBuffer.allocate(74);
+        buffer.put(message.getBytes());
+        buffer.flip();
+        channel.write(buffer);
+        buffer.clear();
     }
 
 
+    /**
+     * Provides a method for implementing the Runnable Class
+     */
     @Override
-    public void run() {
-        try {
-            this.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void run(){
+        this.start();
     }
+
+    private int sumASCII(String str) {
+        int sum = 0;
+        for (char c : str.toCharArray()) {
+            sum += (int) c;
+        }
+        return sum;
+    }
+
+
 }

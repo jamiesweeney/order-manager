@@ -1,6 +1,9 @@
 package org.m3.js;
 
 
+import quickfix.fix44.Message;
+import quickfix.fix44.NewOrderSingle;
+
 import java.io.IOException;
 
 /**
@@ -29,9 +32,8 @@ public class App
                 Client client3 = new Client();
                 client3.connect("localhost", 9093);
 
-                client1.write("Hello");
-                client2.write("World");
-                client3.write("!!");
+//                client1.placeNewMarketOrder("VOD", 1, 10 );
+//                client1.disconnect();
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
@@ -40,5 +42,10 @@ public class App
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
+
     }
 }

@@ -2,14 +2,16 @@ package org.m3.js;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
-import java.util.HashMap;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- *
- *
  *
  */
 public class Client {
@@ -18,8 +20,11 @@ public class Client {
     SocketChannel client;
 
 
-    public void connect(String hostname, int port) throws IOException, InterruptedException {
+    private String fixVersion = "FIX.4.4";
+    private String accountID = "TestAccount";
+    private int msgCount = 0;
 
+    public void connect(String hostname, int port) throws IOException, InterruptedException {
         hostAddress = new InetSocketAddress(hostname, port);
         client = SocketChannel.open(hostAddress);
     }
@@ -37,51 +42,48 @@ public class Client {
 
     public void write(String message) throws IOException {
 
-        ByteBuffer buffer = ByteBuffer.allocate(74);
+        ByteBuffer buffer = ByteBuffer.allocate(message.length());
         buffer.put(message.getBytes());
         buffer.flip();
         client.write(buffer);
         buffer.clear();
     }
 
+    public String read() throws IOException {
 
-    public void placeOrder{
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        int numRead = -1;
+        numRead = client.read(buffer);
 
-    }
+        if (numRead == -1) {
+            Socket socket = client.socket();
+            SocketAddress remoteAddr = socket.getRemoteSocketAddress();
+            System.out.println("Connection closed by server: " + remoteAddr);
+            client.close();
+            return null;
+        }
 
-    public void createFixMsg(){
-
-        Map fixMsg = new HashMap<>();
-
-
-        // Standard header
-
-        
-
-        // Required fields
-        fixMsg.put("1");    // Account
-        fixMsg.put("11");   // Client Order ID
-        fixMsg.put("48");   // Security ID
-        fixMsg.put("55");   // Symbol
-        fixMsg.put("207");  // Security Exchange
-        fixMsg.put("167");  // Security Type
-        fixMsg.put("54");   // Side
-        fixMsg.put("38");   // Order Quantity
-        fixMsg.put("40");   // Order Type
-        fixMsg.put("59");   // Time in Force
-        fixMsg.put("60");   // Transaction Time
-        fixMsg.put("21");   // HandlInst
-
-        // Standard trailer
-
-
-
-
-
-
-
-
+        byte[] data = new byte[numRead];
+        System.arraycopy(buffer.array(), 0, data, 0, numRead);
+        return new String(data);
     }
 
 
+    public void placeNewMarketOrder(String symbol, int side, int quantity){
+        try {
+            FixBuilder fbuild = new FixBuilder();
+            fbuild.addHeader("FIX.4.4", "D");
+            fbuild.addBody(this.accountID, this.msgCount, symbol, side, quantity);
+            fbuild.addFooter();
+            String message = fbuild.getMessageString();
+            this.write(message);
+
+            // Only want to add one if successful
+            this.msgCount++;
+        } catch (FixException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
