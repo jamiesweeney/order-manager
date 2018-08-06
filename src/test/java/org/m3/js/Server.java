@@ -99,7 +99,7 @@ public class Server implements Runnable{
     }
 
 
-    // accept client connection
+    // accept server connection
     private void acceptClient(SelectionKey key) throws IOException {
         ServerSocketChannel serverChannel = (ServerSocketChannel) key.channel();
         SocketChannel channel = serverChannel.accept();
@@ -124,7 +124,7 @@ public class Server implements Runnable{
         if (numRead == -1) {
             Socket socket = channel.socket();
             SocketAddress remoteAddr = socket.getRemoteSocketAddress();
-            System.out.println("Connection closed by client: " + remoteAddr);
+            System.out.println("Connection closed by server: " + remoteAddr);
             channel.close();
             key.cancel();
             return;

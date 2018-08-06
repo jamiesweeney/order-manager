@@ -1,15 +1,15 @@
 package org.m3.js;
 
+import org.m3.js.Messages.FixException;
+import org.m3.js.Messages.NewOrderSingleMessage;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
 import java.nio.channels.SocketChannel;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
  *
@@ -17,20 +17,35 @@ import java.util.Map;
 public class Client {
 
     InetSocketAddress hostAddress;
-    SocketChannel client;
+    SocketChannel server;
 
-
-    private String fixVersion = "FIX.4.4";
-    private String accountID = "TestAccount";
+    private String fixVersion;
     private int msgCount = 0;
 
-    public void connect(String hostname, int port) throws IOException, InterruptedException {
+    private String clientID;
+    private String OMID;
+
+
+    public Client(String fixVersion){
+        this.fixVersion = fixVersion;
+    }
+
+    public void connect(String hostname, int port) throws IOException{
         hostAddress = new InetSocketAddress(hostname, port);
-        client = SocketChannel.open(hostAddress);
+        server = SocketChannel.open(hostAddress);
+
+        // Get the id for the client and the server
+        this.write("ID_REQUEST");
+        String resp = this.readAll()[0];
+        String[] ids = resp.split("\\|");
+
+        // Set ids
+        this.clientID = ids[0];
+        this.OMID = ids[1];
     }
 
     public void disconnect() throws IOException {
-        client.close();
+        server.close();
     }
 
     public void writeMany(String[] messages) throws IOException {
@@ -42,24 +57,34 @@ public class Client {
 
     public void write(String message) throws IOException {
 
+        // Add EOF to message
+        message = message + "\0";
+
+        // Send message
         ByteBuffer buffer = ByteBuffer.allocate(message.length());
         buffer.put(message.getBytes());
         buffer.flip();
-        client.write(buffer);
+        server.write(buffer);
         buffer.clear();
+    }
+
+    public String[] readAll() throws IOException {
+
+        String[] messages = this.read().split("\0");
+        return messages;
     }
 
     public String read() throws IOException {
 
-        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        ByteBuffer buffer = ByteBuffer.allocate(2048);
         int numRead = -1;
-        numRead = client.read(buffer);
+        numRead = server.read(buffer);
 
         if (numRead == -1) {
-            Socket socket = client.socket();
+            Socket socket = server.socket();
             SocketAddress remoteAddr = socket.getRemoteSocketAddress();
             System.out.println("Connection closed by server: " + remoteAddr);
-            client.close();
+            server.close();
             return null;
         }
 
@@ -69,21 +94,38 @@ public class Client {
     }
 
 
+
     public void placeNewMarketOrder(String symbol, int side, int quantity){
         try {
-            FixBuilder fbuild = new FixBuilder();
-            fbuild.addHeader("FIX.4.4", "D");
-            fbuild.addBody(this.accountID, this.msgCount, symbol, side, quantity);
-            fbuild.addFooter();
-            String message = fbuild.getMessageString();
-            this.write(message);
+
+            int newID = this.msgCount++;
+            String clOrdID = this.clientID + "_" + newID;
+            NewOrderSingleMessage nosm = new NewOrderSingleMessage();
+            nosm.addHeader(this.fixVersion, this.clientID, this.OMID, newID);
+            nosm.addBody(clOrdID, symbol, side, quantity, "1");
+            nosm.addTrailer();
+            nosm.packageMessage();
+            String message = nosm.getMessageString();
+            this.write(message.substring(3));
 
             // Only want to add one if successful
-            this.msgCount++;
         } catch (FixException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void listen() {
+        while (true){
+            try {
+                String[] messages = this.readAll();
+                for (String message : messages){
+                    System.out.println("Client got: " + message);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
