@@ -1,10 +1,10 @@
-package org.m3.js;
+package org.m3.js.OrderManager;
 
 import org.apache.log4j.Logger;
-import org.m3.js.Messages.FailedMessage;
-import org.m3.js.Messages.FixException;
-import org.m3.js.Messages.Message;
-import org.m3.js.Messages.RejectMessage;
+import org.m3.js.Messages.*;
+import org.m3.js.Messages.ReportMessages.ExecutionReportMessage;
+import org.m3.js.Messages.ReportMessages.RejectMessage;
+import org.m3.js.Orders.MarketOrder;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -16,7 +16,6 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -26,26 +25,30 @@ import java.util.concurrent.TimeUnit;
  */
 public class BasicOrderManager implements Runnable{
 
+    // Constants
+    private static final String EOF = "\0";
+    private static final String DELIM = "|";
+
+    // Varaibles for I/O
     private Selector selector;
     private InetSocketAddress listenAddress;
-
     private String address;
     private int port;
 
-    // 0 - never ran
-    // 1 - running
-    // 2 - paused
     private int runStatus = 0;
 
     private String id;
+
     private int msgCount = 0;
-    private int orderID = 0;
+    private int execMsgCount = 0;
+    private long orderID = 0;
 
     private Map<String, String> clients;
     private int clientCount = 0;
 
-    private static final String EOF = "\0";
-    private static final String DELIM = "|";
+    private Socket trader;
+
+    Map<Long,MarketOrder> orders;
 
     private Logger logger = Logger.getLogger(BasicOrderManager.class);
 
@@ -66,7 +69,9 @@ public class BasicOrderManager implements Runnable{
 
         clients = new HashMap<>();
 
-        logger.info("BasicOrderManager created - address="+address + " port=" + port + " id=" + id);
+        orders = new HashMap<>();
+
+        logger.info("BasicOrderManager created: address="+address + " port=" + port + " id=" + id);
     }
 
 
@@ -97,7 +102,7 @@ public class BasicOrderManager implements Runnable{
             listen();
         } catch (IOException e) {
             logger.error("BasicOrderManager threw an IOError during startup");
-            logger.error(e.getStackTrace());
+            e.printStackTrace();
         }
     }
 
@@ -132,6 +137,14 @@ public class BasicOrderManager implements Runnable{
      * @throws IOException
      */
     private void setup() throws IOException {
+
+
+        setupClientServer();
+        setupTraderConnection();
+
+    }
+
+    private void setupClientServer() throws IOException{
         // Create selector to handle multiple channels
         this.selector = Selector.open();
 
@@ -144,6 +157,19 @@ public class BasicOrderManager implements Runnable{
         serverChannel.register(this.selector, SelectionKey.OP_ACCEPT);
 
         logger.info("Server started on port " + this.port);
+    }
+
+    private void setupTraderConnection() throws IOException {
+        InetSocketAddress hostAddress = new InetSocketAddress(this.address, 1000);
+        SocketChannel server = SocketChannel.open(hostAddress);
+
+        String message = "WORK PLEASE";
+        // Send message
+        ByteBuffer buffer = ByteBuffer.allocate(message.length());
+        buffer.put(message.getBytes());
+        buffer.flip();
+        server.write(buffer);
+        buffer.clear();
     }
 
 
@@ -304,21 +330,21 @@ public class BasicOrderManager implements Runnable{
         int numRead = -1;
         numRead = channel.read(buffer);
 
-        System.out.println(numRead);
+        // If the client has disconnected
         if (numRead == -1) {
             // Unregister and disconnect if client has closed connection
             this.cancelClient(channel, key);
             return "";
-        } else if (numRead == 0){
+        }
 
-            // Return empty string if the message is finished
-            return "";
+        // Read the message
+        byte[] data = new byte[numRead];
+        System.arraycopy(buffer.array(), 0, data, 0, numRead);
+
+        // Call recursively if still some message left
+        if (numRead < 1024){
+            return new String(data);
         }else{
-
-            // Continue to read message if some left
-            byte[] data = new byte[numRead];
-            System.arraycopy(buffer.array(), 0, data, 0, numRead);
-            System.out.println(new String(data));
             return new String(data) + this.read(key);
         }
     }
@@ -328,8 +354,11 @@ public class BasicOrderManager implements Runnable{
         Message msg;
         int seqNum = -1;
 
+
         // Try get the sequence number
         String[] tags = message.split("\\|");
+
+
         for (String s : tags){
             if (s.startsWith("34=")){
                 seqNum = Integer.parseInt(s.substring(3));
@@ -342,8 +371,6 @@ public class BasicOrderManager implements Runnable{
         }else{
             msg = Message.parseFromText(message);
         }
-
-        System.out.println(msg.getClass());
 
         if (msg.getClass().equals(FailedMessage.class)){
 
@@ -360,10 +387,33 @@ public class BasicOrderManager implements Runnable{
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else{
+        }else if (msg.getClass().equals(NewOrderSingleMessage.class)){
 
-            // Send the message to the trader for acceptance / rejection
-            int uID = this.orderID++;
+            // Create a new order object
+            Map<Integer, String> msgTags = ((NewOrderSingleMessage) msg).getTags();
+            MarketOrder order = new MarketOrder(this.orderID++, msgTags.get(49), msgTags.get(11), msgTags.get(55), Integer.parseInt(msgTags.get(54)), Integer.parseInt(msgTags.get(38)));
+            this.orders.put(order.getID(), order);
+
+            // Send a confirmation to the client
+            ExecutionReportMessage reportMessage = new ExecutionReportMessage();
+            try {
+                reportMessage.addHeader("Fix.4.4", this.id, clientName, this.msgCount++);
+                reportMessage.addBody(order.getID(), order.getClOrdID(), this.execMsgCount++, '0',
+                        order.getOrdStatus(), order.getOrdStatus(), order.getSymbol(), order.getSide(), order.getQuantity(),
+                        order.getQuantity() - order.getCumQuantity(), order.getCumQuantity(), 0);
+                reportMessage.addTrailer();
+                reportMessage.packageMessage();
+                this.write(key, reportMessage.getMessageString());
+            } catch (FixException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // Send the order to the trader
+
+
+
         }
     }
 

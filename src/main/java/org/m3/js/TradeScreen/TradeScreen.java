@@ -1,8 +1,8 @@
-package TradeScreen;
+package org.m3.js.TradeScreen;
+
+import org.m3.js.OrderManager.Order;
 
 import java.io.IOException;
-
-import OrderManager.Order;
 
 public interface TradeScreen {
 	public enum api{newOrder,price,fill,cross};

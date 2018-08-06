@@ -3,6 +3,8 @@ package org.m3.js.Messages;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import static java.util.Collections.addAll;
+
 public abstract class Message {
 
     protected Map<Integer, String> header;
@@ -98,6 +100,9 @@ public abstract class Message {
         return this.messageStr;
     }
 
+
+
+
     public static final Message parseFromText(String message) {
 
         // Try and parse the message
@@ -186,7 +191,7 @@ public abstract class Message {
 
 
     // Methods for getting a message string from the message
-    protected void createMessageString(){
+    public void createMessageString(){
 
         // Combine all tags
         List<Map.Entry<Integer,String>> entries = new LinkedList<Map.Entry<Integer,String>>(){{

@@ -1,10 +1,12 @@
-package org.m3.js.Messages;
+package org.m3.js.Messages.ReportMessages;
+
+import org.m3.js.Messages.Message;
 
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
-public class RejectMessage extends Message{
+public class RejectMessage extends Message {
 
     protected Set<Integer> reqBody = new HashSet<Integer>() {{
         add(45);
@@ -39,9 +41,4 @@ public class RejectMessage extends Message{
         }
         return true;
     }
-
-
-
-
-
 }

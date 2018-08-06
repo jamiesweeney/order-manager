@@ -2,6 +2,8 @@ package org.m3.js.Messages;
 
 import java.util.*;
 
+import static java.util.Collections.addAll;
+
 public class NewOrderSingleMessage extends Message{
 
 
@@ -74,7 +76,36 @@ public class NewOrderSingleMessage extends Message{
             throw new FixException("FIX-EX: Checksum is not correct, have \"" + tags.get(10) + "\" expected \"" + checksum + "\"");
         }
 
+        System.out.println(tags);
+        this.setFromMap(tags);
+
     }
+
+    protected void setFromMap(Map<Integer, String> tags){
+        header = new LinkedHashMap<>();
+        body = new LinkedHashMap<>();
+        trailer = new LinkedHashMap<>();
+
+        for (Integer tag : reqHeader){
+            this.header.put(tag,tags.get(tag));
+        }
+        for (Integer tag : reqBody){
+            this.body.put(tag,tags.get(tag));
+        }
+        for (Integer tag : reqTrailer){
+            this.trailer.put(tag,tags.get(tag));
+        }
+    }
+
+    public Map<Integer, String> getTags(){
+        Map<Integer,String> tags = new LinkedHashMap<Integer, String>();
+        tags.putAll(header);
+        tags.putAll(body);
+        tags.putAll(trailer);
+        return tags;
+    }
+
+
 
     @Override
     protected boolean isBodyValid(boolean done){

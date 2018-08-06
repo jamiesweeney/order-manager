@@ -106,7 +106,7 @@ public class Client {
             nosm.addTrailer();
             nosm.packageMessage();
             String message = nosm.getMessageString();
-            this.write(message.substring(3));
+            this.write(message);
 
             // Only want to add one if successful
         } catch (FixException e) {
