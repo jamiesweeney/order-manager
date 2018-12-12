@@ -76,7 +76,6 @@ public class NewOrderSingleMessage extends Message{
             throw new FixException("FIX-EX: Checksum is not correct, have \"" + tags.get(10) + "\" expected \"" + checksum + "\"");
         }
 
-        System.out.println(tags);
         this.setFromMap(tags);
 
     }

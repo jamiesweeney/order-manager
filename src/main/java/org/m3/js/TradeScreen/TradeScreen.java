@@ -1,13 +1,13 @@
 package org.m3.js.TradeScreen;
 
-import org.m3.js.OrderManager.Order;
+import org.m3.js.Orders.Order;
 
 import java.io.IOException;
 
 public interface TradeScreen {
-	public enum api{newOrder,price,fill,cross};
-	public void newOrder(int id,Order order) throws IOException, InterruptedException;
-	public void acceptOrder(int id) throws IOException;
-	public void sliceOrder(int id,int sliceSize) throws IOException;
-	public void price(int id,Order o) throws InterruptedException, IOException;
+	void newOrder(Order order);
+	void acceptOrder(Order order);
+	void declineOrder(Order order);
+	void sliceOrder(Order order);
+	void price(Order order);
 }

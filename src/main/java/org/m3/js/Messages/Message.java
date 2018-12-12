@@ -105,87 +105,38 @@ public abstract class Message {
 
     public static final Message parseFromText(String message) {
 
-        // Try and parse the message
-        try{
+        // Parse to tags
+        Map<Integer,String> tags = new LinkedHashMap<>();
+        String[] tagArr = message.split("\\|");
+        for (String tag : tagArr){
+            String[] elems = tag.split("=");
 
-            // Parse to tags
-            Map<Integer,String> tags = new LinkedHashMap<>();
-            String[] tagArr = message.split("\\|");
-            for (String tag : tagArr){
-                String[] elems = tag.split("=");
+            // Attempt to parse message type
+            try{
+                tags.put(Integer.parseInt(elems[0]), elems[1]);
+            }catch (NumberFormatException e){
+                return new FailedMessage("FIX-EX: Could not parse \"" + tag + "\"");
+            }
+        }
 
+        // Check if contains message type
+        if (!tags.containsKey(35)){
+            return new FailedMessage("FIX-EX: Missing tag 35");
+        }
+
+        // Check which type of message
+        switch (tags.get(35)){
+
+            // New Order Single
+            case "D": NewOrderSingleMessage msgObj = new NewOrderSingleMessage();
                 try{
-                    tags.put(Integer.parseInt(elems[0]), elems[1]);
-                }catch (NumberFormatException e){
-                    return new FailedMessage("FIX-EX: Could not parse \"" + tag + "\"");
-                }
-            }
-
-
-            if (!tags.containsKey(35)){
-                return new FailedMessage("FIX-EX: Missing tag 35");
-            }
-
-            switch (tags.get(35)){
-                case "0": break;
-                case "1": break;
-                case "2": break;
-                case "3": break;
-                case "4": break;
-                case "5": break;
-                case "6": break;
-                case "7": break;
-                case "8": break;
-                case "9": break;
-                case "A": break;
-                case "B": break;
-                case "C": break;
-
-                // New Order Single
-                case "D": NewOrderSingleMessage msgObj = new NewOrderSingleMessage();
                     msgObj.parse(message);
                     return msgObj;
-                case "E": break;
-                case "F": break;
-                case "G": break;
-                case "H": break;
-                case "I": break;
-                case "J": break;
-                case "K": break;
-                case "L": break;
-                case "M": break;
-                case "N": break;
-                case "O": break;
-                case "P": break;
-                case "Q": break;
-                case "R": break;
-                case "S": break;
-                case "T": break;
-                case "U": break;
-                case "V": break;
-                case "W": break;
-                case "X": break;
-                case "Y": break;
-                case "Z": break;
-                case "a": break;
-                case "b": break;
-                case "c": break;
-                case "d": break;
-                case "e": break;
-                case "f": break;
-                case "g": break;
-                case "h": break;
-                case "i": break;
-                case "j": break;
-                case "k": break;
-                case "l": break;
-                case "m": break;
-                default:
-                    return new FailedMessage("FIX-EX: Unknown message type \"" + tags.get(35) + "\"");
-            }
-            return new FailedMessage("FIX-EX: Unsupported message type \"" + tags.get(35) + "\"");
-        }catch (FixException e){
-            return new FailedMessage(e.getMessage());
+                } catch (FixException e){
+                    return new FailedMessage(e.getMessage());
+                }
+            default:
+                return new FailedMessage("FIX-EX: Unknown message type \"" + tags.get(35) + "\"");
         }
     }
 

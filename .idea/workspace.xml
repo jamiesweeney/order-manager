@@ -2,14 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6820aa9c-bec1-4850-855b-dd518cf17f57" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/m3/js/BetterClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/m3/js/RandomTrader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/LiveMarketData/LiveMarketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/LiveMarketData/LiveMarketData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/NewOrderSingleMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/NewOrderSingleMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/OrderManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/OrderRouter/Router.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/MarketOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/MarketOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Ref/Instrument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/Ref/Ric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/m3/js/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/m3/js/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/m3/js/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/m3/js/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/m3/js/Trader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
@@ -25,7 +45,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ordman$App.ic" NAME="App Coverage Results" MODIFIED="1533133071478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ordman$App.ic" NAME="App Coverage Results" MODIFIED="1544645751907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.m3.js.old.*</FILTER>
     </SUITE>
   </component>
@@ -34,42 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="method#disconnect#0;class#ClientNode#0" />
-                <element signature="method#writeToServer#0;class#ClientNode#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerNode.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="78" column="67" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
-              <folding>
-                <element signature="method#start#0;class#ServerNode#0" />
-                <element signature="method#setup#0;class#ServerNode#0" />
-                <element signature="method#acceptClient#0;class#ServerNode#0" />
-                <element signature="method#run#0;class#ServerNode#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerImpl.java">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,24 +66,109 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerImpl.java">
+      <file leaf-file-name="BasicOrderManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="166">
+              <caret line="407" column="13" selection-start-line="407" selection-start-column="13" selection-end-line="407" selection-end-column="13" />
               <folding>
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#229#230#0" expanded="true" />
+                <element signature="docComment;class#BasicOrderManager#0" />
+                <element signature="e#1744#2196#0" />
+                <element signature="e#1744#3065#0" />
+                <element signature="e#3102#3174#0" />
+                <element signature="e#3269#3320#0" />
+                <element signature="e#3269#3435#0" />
+                <element signature="e#3440#3491#0" />
+                <element signature="e#3440#3609#0" />
+                <element signature="e#3614#3666#0" />
+                <element signature="e#3614#3782#0" />
+                <element signature="e#3787#3837#0" />
+                <element signature="e#3787#3947#0" />
+                <element signature="e#3992#4125#0" />
+                <element signature="e#3992#4421#0" />
+                <element signature="e#4427#4609#0" />
+                <element signature="e#4427#5465#0" />
+                <element signature="e#5471#5607#0" />
+                <element signature="e#5471#5857#0" />
+                <element signature="e#5905#5966#0" />
+                <element signature="e#5905#6694#0" />
+                <element signature="e#6700#6786#0" />
+                <element signature="e#6700#6975#0" />
+                <element signature="e#7020#7180#0" />
+                <element signature="e#7020#7328#0" />
+                <element signature="e#7334#7519#0" />
+                <element signature="e#7334#7678#0" />
+                <element signature="e#7684#7891#0" />
+                <element signature="e#10483#10602#0" />
+                <element signature="e#10483#10783#0" />
+                <element signature="e#10842#11045#0" />
+                <element signature="e#10842#11451#0" />
+                <element signature="e#11457#11654#0" />
+                <element signature="e#14405#14570#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java">
+      <file leaf-file-name="RandomTrader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/RandomTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="-422">
+              <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradeScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;class#ServerNode#0" />
+                <element signature="docComment;method#ServerNode#0;class#ServerNode#0" />
+                <element signature="method#ServerNode#0;class#ServerNode#0" />
+                <element signature="docComment;method#run#0;class#ServerNode#0" />
+                <element signature="method#run#0;class#ServerNode#0" />
+                <element signature="docComment;method#start#0;class#ServerNode#0" />
+                <element signature="method#start#0;class#ServerNode#0" />
+                <element signature="docComment;method#setup#0;class#ServerNode#0" />
+                <element signature="method#setup#0;class#ServerNode#0" />
+                <element signature="docComment;method#listen#0;class#ServerNode#0" />
+                <element signature="method#listen#0;class#ServerNode#0" />
+                <element signature="docComment;method#acceptClient#0;class#ServerNode#0" />
+                <element signature="method#acceptClient#0;class#ServerNode#0" />
+                <element signature="docComment;method#readAllFromClient#0;class#ServerNode#0" />
+                <element signature="method#readAllFromClient#0;class#ServerNode#0" />
+                <element signature="docComment;method#readFromClient#0;class#ServerNode#0" />
+                <element signature="method#readFromClient#0;class#ServerNode#0" />
+                <element signature="docComment;method#writeToClient#0;class#ServerNode#0" />
+                <element signature="method#writeToClient#0;class#ServerNode#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BetterClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/BetterClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1496">
+              <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,7 +190,17 @@
       <find>sys</find>
       <find>syst</find>
       <find>syste</find>
+      <find>system.o</find>
+      <find>serveID</find>
+      <find>system.</find>
+      <find>print</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Jamie\Workspace\order-manager\src\test\java\org\m3\js</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -136,36 +220,44 @@
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/old/FixBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/FailedMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/RejectMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/Order.java" />
         <option value="$PROJECT_DIR$/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/BasicOrderManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/OrderManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/LiveMarketData/LiveMarketData.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/NewOrderSingleMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/PendingNewMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/RejectMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/MarketOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/ExecutionReportMessage.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/m3/js/Server.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/Trader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/ServerManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/ServerNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/ServerManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/ClientManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/ClientManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/ClientNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/NewOrderSingleMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/OrderRouter/Router.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/MyObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/Fill.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/Trader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Database/Database.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/BetterClient.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/RandomTrader.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Messages/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/Orders/MarketOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/m3/js/App.java" />
       </list>
     </option>
   </component>
@@ -193,21 +285,27 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
               <item name="order-manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="order-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
@@ -257,36 +355,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="Communication" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="order-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Communication" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="order-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Messages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="order-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Messages" type="462c0819:PsiDirectoryNode" />
-              <item name="ReportMessages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
@@ -304,7 +373,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Orders" type="462c0819:PsiDirectoryNode" />
+              <item name="TradeScreen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ordman" type="b2602c69:ProjectViewProjectNode" />
@@ -336,7 +405,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,19 +412,25 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.m3.js" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jamie\Workspace\order-manager\test-resources" />
+      <recent name="C:\Users\Jamie\Workspace\order-manager\src\main\java\org\m3\js\Communication\Server" />
+      <recent name="C:\Users\Jamie\Workspace\order-manager\src\main\java" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.m3.js" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.m3.js.OrderManager" />
       <recent name="org.m3.js.Messages" />
     </key>
   </component>
@@ -478,23 +552,23 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.25071225" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.25054467" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="1" weight="0.10469799" />
+      <window_info anchor="right" id="Maven Projects" order="1" visible="true" weight="0.104477614" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26210827" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40413943" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22334754" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24966443" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.24966443" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24946696" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3295302" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
@@ -505,27 +579,27 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2934473" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17181209" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22334754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24966443" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21786493" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.25071225" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.10469799" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.25054467" />
+      <window_info anchor="right" id="Maven Projects" order="1" weight="0.10469799" />
       <window_info id="Favorites" order="4" side_tool="true" weight="0.3295302" />
     </layout-to-restore>
   </component>
@@ -534,7 +608,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="38" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -542,134 +616,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="docComment;class#BasicOrderManager#0" />
-            <element signature="docComment;method#BasicOrderManager#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#start#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#pause#0;class#BasicOrderManager#0" />
-            <element signature="method#pause#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#setup#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#listen#0;class#BasicOrderManager#0" />
-            <element signature="method#listen#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#acceptClient#0;class#BasicOrderManager#0" />
-            <element signature="method#acceptClient#0;class#BasicOrderManager#0" />
-            <element signature="method#serveID#0;class#BasicOrderManager#0" />
-            <element signature="method#cancelClient#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#readClient#0;class#BasicOrderManager#0" />
-            <element signature="method#readClient#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#readAll#0;class#BasicOrderManager#0" />
-            <element signature="method#readAll#0;class#BasicOrderManager#0" />
-            <element signature="method#read#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#write#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#run#0;class#BasicOrderManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <element signature="docComment;class#Client#0" />
-            <element signature="method#disconnect#0;class#Client#0" />
-            <element signature="method#writeMany#0;class#Client#0" />
-            <element signature="method#write#0;class#Client#0" />
-            <element signature="method#read#0;class#Client#0" />
-            <element signature="method#placeNewMarketOrder#0;class#Client#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-end-line="146" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="docComment;class#BasicOrderManager#0" />
-            <element signature="docComment;method#BasicOrderManager#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#start#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#pause#0;class#BasicOrderManager#0" />
-            <element signature="method#pause#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#setup#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#listen#0;class#BasicOrderManager#0" />
-            <element signature="method#listen#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#acceptClient#0;class#BasicOrderManager#0" />
-            <element signature="method#acceptClient#0;class#BasicOrderManager#0" />
-            <element signature="method#serveID#0;class#BasicOrderManager#0" />
-            <element signature="method#cancelClient#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#readClient#0;class#BasicOrderManager#0" />
-            <element signature="method#readClient#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#readAll#0;class#BasicOrderManager#0" />
-            <element signature="method#readAll#0;class#BasicOrderManager#0" />
-            <element signature="method#read#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#write#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#run#0;class#BasicOrderManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#Client#0" />
-            <element signature="method#disconnect#0;class#Client#0" />
-            <element signature="method#writeMany#0;class#Client#0" />
-            <element signature="method#write#0;class#Client#0" />
-            <element signature="method#read#0;class#Client#0" />
-            <element signature="method#placeNewMarketOrder#0;class#Client#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-manager.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/AppTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/App.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/nio/channels/SelectableChannel.java">
@@ -694,20 +640,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/old/FIX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/old/FixBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/old/FIX.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/old/FixBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/FixException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -715,13 +649,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -750,67 +678,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/old/OrderClient/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/ClientManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/old/OrderClient/Client.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/ClientManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Ref/Ric.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Ref/Instrument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/LiveMarketData/LiveMarketData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="method#Order#0;class#Order#0" />
-            <element signature="method#sliceSizes#0;class#Order#0" />
-            <element signature="method#newSlice#0;class#Order#0" />
-            <element signature="method#sizeFilled#0;class#Order#0" />
-            <element signature="method#price#0;class#Order#0" />
-            <element signature="method#createFill#0;class#Order#0" />
-            <element signature="method#cross#0;class#Order#0" />
-            <element signature="method#cancel#0;class#Order#0" />
-            <element signature="class#Fill#0" />
-            <element signature="method#Fill#0;class#Fill#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,13 +694,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/ExecutionReportMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/RejectMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="26" selection-start-line="26" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/sun/nio/ch/SocketChannelImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="647" selection-start-line="647" selection-end-line="647" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/NewOrderSingleMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/MyObject.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ByteArrayOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="255" column="31" selection-start-line="255" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/main.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Database/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/LiveMarketData/LiveMarketData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/OrderManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderRouter/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Ref/Instrument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="139">
+          <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
           <folding>
             <element signature="docComment;method#getMsgType#0;class#Message#0" />
-            <element signature="method#addHeader#0;class#Message#0" />
             <element signature="method#addTrailer#0;class#Message#0" />
             <element signature="method#packageMessage#0;class#Message#0" />
             <element signature="method#createMessageString#0;class#Message#0" />
@@ -847,89 +812,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#ClientNode#0" />
+            <element signature="docComment;method#ClientNode#0;class#ClientNode#0" />
+            <element signature="method#ClientNode#0;class#ClientNode#0" />
+            <element signature="docComment;method#run#0;class#ClientNode#0" />
+            <element signature="method#run#0;class#ClientNode#0" />
+            <element signature="docComment;method#start#0;class#ClientNode#0" />
+            <element signature="method#start#0;class#ClientNode#0" />
+            <element signature="docComment;method#connect#0;class#ClientNode#0" />
+            <element signature="method#connect#0;class#ClientNode#0" />
+            <element signature="docComment;method#disconnect#0;class#ClientNode#0" />
+            <element signature="method#disconnect#0;class#ClientNode#0" />
+            <element signature="docComment;method#listen#0;class#ClientNode#0" />
+            <element signature="method#listen#0;class#ClientNode#0" />
+            <element signature="docComment;method#readAllFromServer#0;class#ClientNode#0" />
+            <element signature="method#readAllFromServer#0;class#ClientNode#0" />
+            <element signature="docComment;method#readFromServer#0;class#ClientNode#0" />
+            <element signature="method#readFromServer#0;class#ClientNode#0" />
+            <element signature="docComment;method#writeToServer#0;class#ClientNode#0" />
+            <element signature="method#writeToServer#0;class#ClientNode#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Orders/Fill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Orders/MarketOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/NewOrderSingleMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Orders/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-958">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        <state relative-caret-position="355">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3018#3035#0" expanded="true" />
-            <element signature="method#isBodyValid#0;class#NewOrderSingleMessage#0" />
-            <element signature="method#addUTCTimestamp#0;class#NewOrderSingleMessage#0" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/OrderManager.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/BetterClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="5" selection-start-line="22" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/ExecutionReportMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#220:282" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Trader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        <state relative-caret-position="1496">
+          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="-1021">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="129" column="5" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="129" selection-end-column="5" />
+        <state relative-caret-position="493">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
           <folding>
             <element signature="docComment;class#Client#0" />
             <element signature="method#writeMany#0;class#Client#0" />
@@ -937,127 +916,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Messages/ReportMessages/RejectMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/TradeScreen/TradeScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="26" selection-start-line="26" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="34">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/sun/nio/ch/SocketChannelImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/RandomTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="647" selection-start-line="647" selection-end-line="647" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="-422">
+          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/OrderManager/BasicOrderManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="445" column="23" lean-forward="true" selection-start-line="424" selection-start-column="8" selection-end-line="445" selection-end-column="23" />
+        <state relative-caret-position="166">
+          <caret line="407" column="13" selection-start-line="407" selection-start-column="13" selection-end-line="407" selection-end-column="13" />
           <folding>
             <element signature="docComment;class#BasicOrderManager#0" />
-            <element signature="docComment;method#BasicOrderManager#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#start#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#pause#0;class#BasicOrderManager#0" />
-            <element signature="method#pause#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#setup#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#listen#0;class#BasicOrderManager#0" />
-            <element signature="method#listen#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#acceptClient#0;class#BasicOrderManager#0" />
-            <element signature="method#acceptClient#0;class#BasicOrderManager#0" />
-            <element signature="method#serveID#0;class#BasicOrderManager#0" />
-            <element signature="method#cancelClient#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#readClient#0;class#BasicOrderManager#0" />
-            <element signature="method#readClient#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#readAll#0;class#BasicOrderManager#0" />
-            <element signature="method#readAll#0;class#BasicOrderManager#0" />
-            <element signature="method#read#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#write#0;class#BasicOrderManager#0" />
-            <element signature="docComment;method#run#0;class#BasicOrderManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1533585713527" expanded="true" signature="966:1274" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Client/ClientNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="method#disconnect#0;class#ClientNode#0" />
-            <element signature="method#writeToServer#0;class#ClientNode#0" />
+            <element signature="e#1744#2196#0" />
+            <element signature="e#1744#3065#0" />
+            <element signature="e#3102#3174#0" />
+            <element signature="e#3269#3320#0" />
+            <element signature="e#3269#3435#0" />
+            <element signature="e#3440#3491#0" />
+            <element signature="e#3440#3609#0" />
+            <element signature="e#3614#3666#0" />
+            <element signature="e#3614#3782#0" />
+            <element signature="e#3787#3837#0" />
+            <element signature="e#3787#3947#0" />
+            <element signature="e#3992#4125#0" />
+            <element signature="e#3992#4421#0" />
+            <element signature="e#4427#4609#0" />
+            <element signature="e#4427#5465#0" />
+            <element signature="e#5471#5607#0" />
+            <element signature="e#5471#5857#0" />
+            <element signature="e#5905#5966#0" />
+            <element signature="e#5905#6694#0" />
+            <element signature="e#6700#6786#0" />
+            <element signature="e#6700#6975#0" />
+            <element signature="e#7020#7180#0" />
+            <element signature="e#7020#7328#0" />
+            <element signature="e#7334#7519#0" />
+            <element signature="e#7334#7678#0" />
+            <element signature="e#7684#7891#0" />
+            <element signature="e#10483#10602#0" />
+            <element signature="e#10483#10783#0" />
+            <element signature="e#10842#11045#0" />
+            <element signature="e#10842#11451#0" />
+            <element signature="e#11457#11654#0" />
+            <element signature="e#14405#14570#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/ServerNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="78" column="67" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
+        <state relative-caret-position="459">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
           <folding>
-            <element signature="method#start#0;class#ServerNode#0" />
-            <element signature="method#setup#0;class#ServerNode#0" />
-            <element signature="method#acceptClient#0;class#ServerNode#0" />
+            <element signature="docComment;class#ServerNode#0" />
+            <element signature="docComment;method#ServerNode#0;class#ServerNode#0" />
+            <element signature="method#ServerNode#0;class#ServerNode#0" />
+            <element signature="docComment;method#run#0;class#ServerNode#0" />
             <element signature="method#run#0;class#ServerNode#0" />
+            <element signature="docComment;method#start#0;class#ServerNode#0" />
+            <element signature="method#start#0;class#ServerNode#0" />
+            <element signature="docComment;method#setup#0;class#ServerNode#0" />
+            <element signature="method#setup#0;class#ServerNode#0" />
+            <element signature="docComment;method#listen#0;class#ServerNode#0" />
+            <element signature="method#listen#0;class#ServerNode#0" />
+            <element signature="docComment;method#acceptClient#0;class#ServerNode#0" />
+            <element signature="method#acceptClient#0;class#ServerNode#0" />
+            <element signature="docComment;method#readAllFromClient#0;class#ServerNode#0" />
+            <element signature="method#readAllFromClient#0;class#ServerNode#0" />
+            <element signature="docComment;method#readFromClient#0;class#ServerNode#0" />
+            <element signature="method#readFromClient#0;class#ServerNode#0" />
+            <element signature="docComment;method#writeToClient#0;class#ServerNode#0" />
+            <element signature="method#writeToClient#0;class#ServerNode#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/m3/js/Communication/Server/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/m3/js/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1127,7 +1087,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>log4j:log4j:1.2.17</last-edited>
+          <last-edited>log4j:log4j:1.2.171</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -9,5 +9,6 @@
         <module name="order-manager" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="10" />
   </component>
 </project>

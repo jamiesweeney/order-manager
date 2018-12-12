@@ -1,2 +1,2 @@
-# order-manager
-Java implementation of a typical order manager.
+# order-serverManager
+Java implementation of a typical order serverManager.
